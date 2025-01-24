@@ -2,6 +2,29 @@
 
 🌎 Find all the details of the challenge at https://frugalaichallenge.org/
 
+[session info](https://www.youtube.com/watch?v=loxJmDaN-zI)
+https://www.elysee.fr/en/sommet-pour-l-action-sur-l-ia
+- AI Action Summit Paris 2025
+    - Feb 6-7 : Science days
+    - Feb 8-9 : Cultural events
+    - Feb 10 : Forum (conferences & workshop)
+    - Feb 11 : Leaders' session and side events
+- Evaluation
+    - matrix accuracyXEnergy:
+        - at least 90% accuracy to be considered
+        - Bottom 10 energy consumption
+    - final selection based on real world application 
+        - model cards : approach and training
+        - other metrics : minimize false positives precision recall ?
+    - hidden test set will be run on Nvidia T4 small GPU (smallest on HF)
+    - LLM interesting use case
+- Ideas:
+    - each run (model_name_timestamp_M1_M2) saved + metrics -> on plotly matrix
+    - try different baseline models
+    - notebook with exploratory analysis
+
+- consent for publishing on this
+
 [Challenge repository on Github](git@github.com:frugal-ai-challenge/frugal-ai-challenge.github.io.git)
 
 [Challenge space on HuggingFace](https://huggingface.co/frugal-ai-challenge)
