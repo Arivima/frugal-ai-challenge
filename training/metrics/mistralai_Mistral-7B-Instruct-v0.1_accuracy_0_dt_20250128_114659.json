@@ -1,0 +1,68 @@
+{
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "timestamp": "2025-01-28_11:46:59",
+    "accuracy": 0.0,
+    "average_latency_sec": NaN,
+    "average_energy_consumption_kWh": 0.0,
+    "average_power_W": NaN,
+    "sample_base": 50,
+    "note": "Baseline SLM, prompt engineering - quote cropping, no fine-tune",
+    "class_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "timestamp": "2025-01-27_17:08:17",
+    "accuracy": 0.48,
+    "average_latency": 2.726300482749939,
+    "average_energy_consumption_kgCO2eq": 0.00011319335110660104,
+    "sample_base": 50,
+    "note": "Baseline SLM, no optimization, no fine-tune",
+    "class_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.4,
+            "Recall": 0.6666666666666666,
+            "F1 Score": 0.5
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.4,
+            "Precision": 1.0,
+            "Recall": 0.4,
+            "F1 Score": 0.5714285714285714
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.75,
+            "Precision": 0.75,
+            "Recall": 0.75,
+            "F1 Score": 0.75
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.7777777777777778,
+            "Precision": 0.7,
+            "Recall": 0.7777777777777778,
+            "F1 Score": 0.7368421052631579
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.14285714285714285,
+            "Precision": 0.5,
+            "Recall": 0.14285714285714285,
+            "F1 Score": 0.2222222222222222
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 1.0,
+            "Precision": 0.23529411764705882,
+            "Recall": 1.0,
+            "F1 Score": 0.38095238095238093
+        }
+    ]
+}

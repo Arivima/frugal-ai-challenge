@@ -1,0 +1,64 @@
+{
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "accuracy": 0.38,
+    "timestamp": "20250127_160019",
+    "note": "Baseline SLM, no optimization, no fine-tune",
+    "class_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 0.5,
+            "Precision": 0.6,
+            "Recall": 0.5,
+            "F1 Score": 0.5454545454545454
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.125,
+            "Precision": 1.0,
+            "Recall": 0.125,
+            "F1 Score": 0.2222222222222222
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.4,
+            "Precision": 1.0,
+            "Recall": 0.4,
+            "F1 Score": 0.5714285714285714
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.8888888888888888,
+            "Precision": 0.38095238095238093,
+            "Recall": 0.8888888888888888,
+            "F1 Score": 0.5333333333333333
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.14285714285714285,
+            "Precision": 0.5,
+            "Recall": 0.14285714285714285,
+            "F1 Score": 0.2222222222222222
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 1.0,
+            "Precision": 0.25,
+            "Recall": 1.0,
+            "F1 Score": 0.4
+        }
+    ]
+}

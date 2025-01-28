@@ -57,6 +57,29 @@ Idées LLM:
 |Qwen 2.5 (0.5B) | Oui | SLM | 0,5B | ~1 | Moyenne | HuggingFace|
 |Phi-2 | Oui | SLM | 2,7B | ~5 | Bonne | HuggingFace|
 
+
+Comparison ML and DL:
+- MultinomialNB
+- BiLSTM
+
+Comparison with traditionnal BERT:
+- 
+
+Comparison 3 LLM:
+
+Mistral, Phi-3, Qwen
+
+| Model | Parameters | Quantization Support | Energy Notes | Key Features | 
+| ---| ---| ---| ---| ---| 
+| Mistral-7B-Instruct | 7B | 4-bit (8GB VRAM) | Efficient architecture, ~5W/inference | Top performance in 7B | class, ideal for instruction-based classification| 
+| Phi-3-mini-128k | 3.8B | 4-bit (4GB VRAM) | Ultra-low ~3W/inference | Microsoft's SOTA for small GPUs, long context (128k tokens)| 
+| Gemma-2B-it | 2B | 8-bit (3GB VRAM) | Apple-optimized (~2W) | Google's lightweight model, native Metal/MLX support for M3| 
+| Llama-3-8B-Instruct | 8B | 4-bit (6GB VRAM) | Optimized KV cache (~7W) | Meta's newest, strong zero-shot classification via system prompts| 
+| Qwen1.5-1.8B-Chat | 1.8B | None needed | ~2.5W sustained | Alibaba's efficient model, built-in safety features| 
+
+
+Lora adapter:
+
 ### Optimizations options:
 Energy consumption optimizations:
 - quantization
@@ -69,3 +92,22 @@ Performance optimization:
 (langchain)
 
 note : Use Pipelines
+
+
+LLM prompt
+prompt = """
+Which category is this sentence ?
+\n\n
+Respond only with the index of the category
+0_not_relevant
+1_not_happening
+2_not_human
+3_not_bad
+4_solutions_harmful_unnecessary
+5_science_unreliable
+6_proponents_biased
+7_fossil_fuels_needed
+\n\n
+sentence :
+For most of the Holocene (last 10k years), sea level has been rising at a rate of around 2mm per year. Climate change has little to do with it - it's simply a long term inevitability which will end when the current interglacial returns to a glacial period (which we will regret). 
+"""
