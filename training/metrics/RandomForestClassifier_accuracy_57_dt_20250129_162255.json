@@ -1,0 +1,72 @@
+{
+    "model_name": "RandomForestClassifier",
+    "timestamp": "2025-01-29_16:22:55",
+    "note": "Baseline ML, improved preproc",
+    "cv_accuracy": 0.5784103914902212,
+    "test_accuracy": 0.5799835931091059,
+    "total_training_latency_sec": 10.398850202560425,
+    "total_training_energy_conso_kWh": 0.000148760833243529,
+    "total_inference_latency_sec": 0.15550708770751953,
+    "total_inference_energy_conso_kWh": 2.22414814763599e-06,
+    "sample_inference_latency_sec": 0.00012756939106441307,
+    "sample_inference_energy_conso_kWh": 1.8245677995373173e-09,
+    "train_size": 4872,
+    "test_size": 1219,
+    "class_performance_metrics": [
+        {
+            "Category": 0,
+            "Accuracy": 0.7808641975308642,
+            "Precision": 0.5560439560439561,
+            "Recall": 0.7808641975308642,
+            "F1 Score": 0.6495507060333762
+        },
+        {
+            "Category": 1,
+            "Accuracy": 0.722972972972973,
+            "Precision": 0.5691489361702128,
+            "Recall": 0.722972972972973,
+            "F1 Score": 0.6369047619047619
+        },
+        {
+            "Category": 2,
+            "Accuracy": 0.6312056737588653,
+            "Precision": 0.559748427672956,
+            "Recall": 0.6312056737588653,
+            "F1 Score": 0.5933333333333334
+        },
+        {
+            "Category": 3,
+            "Accuracy": 0.38961038961038963,
+            "Precision": 0.8108108108108109,
+            "Recall": 0.38961038961038963,
+            "F1 Score": 0.5263157894736842
+        },
+        {
+            "Category": 4,
+            "Accuracy": 0.43870967741935485,
+            "Precision": 0.6355140186915887,
+            "Recall": 0.43870967741935485,
+            "F1 Score": 0.5190839694656488
+        },
+        {
+            "Category": 5,
+            "Accuracy": 0.525,
+            "Precision": 0.5793103448275863,
+            "Recall": 0.525,
+            "F1 Score": 0.5508196721311476
+        },
+        {
+            "Category": 6,
+            "Accuracy": 0.3503184713375796,
+            "Precision": 0.5789473684210527,
+            "Recall": 0.3503184713375796,
+            "F1 Score": 0.4365079365079365
+        },
+        {
+            "Category": 7,
+            "Accuracy": 0.3684210526315789,
+            "Precision": 0.6363636363636364,
+            "Recall": 0.3684210526315789,
+            "F1 Score": 0.4666666666666667
+        }
+        ]}

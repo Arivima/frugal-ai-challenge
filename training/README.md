@@ -111,3 +111,16 @@ Respond only with the index of the category
 sentence :
 For most of the Holocene (last 10k years), sea level has been rising at a rate of around 2mm per year. Climate change has little to do with it - it's simply a long term inevitability which will end when the current interglacial returns to a glacial period (which we will regret). 
 """
+
+
+# CodeCarbon Metrics Table
+
+| **Metric Name**                  | **Metric Unit**  | **Definition**                                | **Formula**                                           | **Usage**                                                  | **Objective**                              |
+|-----------------------------------|-----------------|----------------------------------------------|-------------------------------------------------------|------------------------------------------------------------|--------------------------------------------|
+| **Carbon Emissions**              | `kgCO₂eq`       | Total CO₂ emissions from computation        | Estimated from energy consumption × carbon intensity  | `tracker.stop()`                                           | Reduce carbon footprint of ML models      |
+| **Energy Consumption**            | `kWh`           | Total energy used in kilowatt-hours         | `P × T / 1000` (`P = Power (W)`, `T = Time (s)`)      | `tracker.final_energy.kWh`                                 | Optimize energy efficiency                 |
+| **Power Consumption**             | `W` (Watts)     | Average power consumption                   | `E / T` (`E = Energy (J)`, `T = Time (s)`)            | `tracker.final_power.W`                                     | Compare hardware efficiency                |
+| **Execution Time**                | `s` (Seconds)   | Total time taken for model inference        | `end_time - start_time`                              | `time.time()` before & after model inference               | Optimize model speed                       |
+| **Energy per Prediction**         | `kWh/sample`    | Energy used per sample prediction          | `Total Energy / Number of Predictions`               | `energy_kWh / X_test.shape[0]`                             | Reduce energy usage per inference         |
+| **Power per Prediction**          | `W/sample`      | Power used per prediction                   | `Total Power / Number of Predictions`                | `power_W / X_test.shape[0]`                                | Optimize per-sample efficiency             |
+| **Carbon Intensity of Grid**      | `gCO₂/kWh`      | CO₂ emissions per kWh of electricity used   | Estimated from regional energy sources               | `tracker._get_carbon_intensity()`                          | Choose low-carbon cloud/compute providers |
