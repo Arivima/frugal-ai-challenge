@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "frugal-ai-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Arielle Villa Massone <arielle.villamassone@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.6.0"
+accelerate = "^1.3.0"
+ipykernel = "^6.29.5"
+jupyter = "^1.1.1"
+notebook = "^7.3.2"
+contractions = "^0.1.73"
+wordsegment = "^1.3.1"
+imblearn = "^0.0"
+tensorflow = "^2.18.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

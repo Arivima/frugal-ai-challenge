@@ -6,3 +6,8 @@ pytorch
 transformers
 accelerate>=0.26.0
 nltk
+jupyter notebook
+contractions
+wordsegment
+imblearn
+tensorflow
