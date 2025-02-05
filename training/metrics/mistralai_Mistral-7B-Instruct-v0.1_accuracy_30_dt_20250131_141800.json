@@ -1,0 +1,72 @@
+{
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "timestamp": "2025-01-31_14:18:00",
+    "note": "Baseline SLM, step by step, quote cropping",
+    "test_size": 50,
+    "quote_max_len": 722,
+    "test_accuracy": 0.3,
+    "total_latency_sec": 93.88830304145813,
+    "total_energy_conso_kWh": 0.0013430872764852316,
+    "sample_latency_sec": 1.8777660608291626,
+    "sample_energy_conso_kWh": 2.686174552970463e-05,
+    "total_emissions_kgCO2eq": 7.794472700354392e-05,
+    "class_performance_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 1.0,
+            "Precision": 0.375,
+            "Recall": 1.0,
+            "F1 Score": 0.5454545454545454
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.2,
+            "Precision": 0.07142857142857142,
+            "Recall": 0.2,
+            "F1 Score": 0.10526315789473684
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.375,
+            "Precision": 0.375,
+            "Recall": 0.375,
+            "F1 Score": 0.375
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.4,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.4,
+            "F1 Score": 0.5
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.1111111111111111,
+            "Precision": 1.0,
+            "Recall": 0.1111111111111111,
+            "F1 Score": 0.2
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 0.5,
+            "Precision": 0.4,
+            "Recall": 0.5,
+            "F1 Score": 0.4444444444444444
+        }
+    ],
+    "prompt": "\n<instruction>\nYour objective is to detect climate disinformation categories based on text from news articles.\nClassify the <statement> into a <category> (0-7). \nRespond STRICTLY with only the corresponding number.\n</instruction>\n\n<categories>\n0 - Statement is not relevant to climate change.\n1 - Statement denies or minimize the existence of Climate change.\n2 - Statement denies or minimize Human responsibility in climate change.\n3 - Statement denies or minimize the negative impact of climate change.\n4 - Statement challenges solutions to climate change.\n5 - Statement challenges scientific evidence.\n6 - Statement challenges climate actors' credibility/motives.\n7 - Suggests fossil fuels are good\n</categories>\n\n<statement>\n\n</statement>\n\nCategory number:"
+}

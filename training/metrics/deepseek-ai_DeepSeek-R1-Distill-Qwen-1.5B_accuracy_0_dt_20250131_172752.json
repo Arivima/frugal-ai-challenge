@@ -1,0 +1,72 @@
+{
+    "model_name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "timestamp": "2025-01-31_17:27:52",
+    "note": "Baseline SLM, step by step, quote cropping",
+    "test_size": 50,
+    "quote_max_len": 1133,
+    "test_accuracy": 0.0,
+    "total_latency_sec": 27.575143814086914,
+    "total_energy_conso_kWh": 0.0003944573837187556,
+    "sample_latency_sec": 0.5515028762817383,
+    "sample_energy_conso_kWh": 7.889147674375112e-06,
+    "total_emissions_kgCO2eq": 2.289193980673426e-05,
+    "class_performance_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        }
+    ],
+    "prompt": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nRespond STRICTLY with only the corresponding number (0-7).\n</instruction>\n\n<categories>\n0 - Not relevant: No climate-related claims or doesn't fit other categories\n1 - Denial: Claims climate change is not happening\n2 - Attribution denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solution opposition: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Actor criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"\"\n</statement>\n\nCategory number:"
+}

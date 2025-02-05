@@ -1,0 +1,72 @@
+{
+    "model_name": "mistralai/Mistral-7B-Instruct-v0.1",
+    "timestamp": "2025-01-31_16:39:15",
+    "note": "Baseline SLM, step by step, quote cropping",
+    "test_size": 50,
+    "quote_max_len": 1133,
+    "test_accuracy": 0.4,
+    "total_latency_sec": 119.01051998138428,
+    "total_energy_conso_kWh": 0.001702477047542731,
+    "sample_latency_sec": 2.3802103996276855,
+    "sample_energy_conso_kWh": 3.404954095085462e-05,
+    "total_emissions_kgCO2eq": 9.880155297709486e-05,
+    "class_performance_metrics": [
+        {
+            "Category": "0_not_relevant",
+            "Accuracy": 0.8333333333333334,
+            "Precision": 0.38461538461538464,
+            "Recall": 0.8333333333333334,
+            "F1 Score": 0.5263157894736842
+        },
+        {
+            "Category": "1_not_happening",
+            "Accuracy": 0.2,
+            "Precision": 0.5,
+            "Recall": 0.2,
+            "F1 Score": 0.2857142857142857
+        },
+        {
+            "Category": "2_not_human",
+            "Accuracy": 0.16666666666666666,
+            "Precision": 0.5,
+            "Recall": 0.16666666666666666,
+            "F1 Score": 0.25
+        },
+        {
+            "Category": "3_not_bad",
+            "Accuracy": 0.25,
+            "Precision": 1.0,
+            "Recall": 0.25,
+            "F1 Score": 0.4
+        },
+        {
+            "Category": "4_solutions_harmful_unnecessary",
+            "Accuracy": 0.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0
+        },
+        {
+            "Category": "5_science_unreliable",
+            "Accuracy": 0.6666666666666666,
+            "Precision": 0.5,
+            "Recall": 0.6666666666666666,
+            "F1 Score": 0.5714285714285714
+        },
+        {
+            "Category": "6_proponents_biased",
+            "Accuracy": 0.14285714285714285,
+            "Precision": 0.5,
+            "Recall": 0.14285714285714285,
+            "F1 Score": 0.2222222222222222
+        },
+        {
+            "Category": "7_fossil_fuels_needed",
+            "Accuracy": 1.0,
+            "Precision": 0.23529411764705882,
+            "Recall": 1.0,
+            "F1 Score": 0.38095238095238093
+        }
+    ],
+    "prompt": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nRespond STRICTLY with only the corresponding number (0-7).\n</instruction>\n\n<categories>\n0 - Other: No climate-related claims or doesn't fit other categories\n1 - Climate change denial: Claims climate change is not happening\n2 - Human responsibility denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solutions criticism: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Activism criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"\"\n</statement>\n\nCategory number:"
+}
