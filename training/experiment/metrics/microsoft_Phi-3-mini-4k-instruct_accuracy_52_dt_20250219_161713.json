@@ -1,0 +1,33 @@
+{
+    "model_name": "microsoft/Phi-3-mini-4k-instruct",
+    "accuracy": 0.52,
+    "timestamp": "2025-02-19_16:17:13",
+    "model_details": {
+        "model_name": "microsoft/Phi-3-mini-4k-instruct",
+        "model_type": "<class 'transformers.models.phi3.modeling_phi3.Phi3ForCausalLM'>",
+        "total_params_Billion": 3.82,
+        "precision": "torch.float32",
+        "estimated_memory_gb": 15.28
+    },
+    "pipeline_kwargs": {
+        "max_new_tokens": 20,
+        "top_k": 50
+    },
+    "quote_len_truncated": false,
+    "prompt_template": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nRespond STRICTLY with only the corresponding number. \nDO NOT INCLUDE ANY OTHER TEXT.\nIf you do not know the answer, make your best guess.\n</instruction>\n\n<categories>\n0 - Not relevant: No climate-related claims or doesn't fit other categories\n1 - Denial: Claims climate change is not happening\n2 - Attribution denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solution opposition: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Actor criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"{quote}\"\n</statement>\n\nCategory number:",
+    "performance": {
+        "Outcome": {
+            "0": "Correct",
+            "1": "Incorrect",
+            "2": "Unknown",
+            "3": "Error"
+        },
+        "Count": {
+            "0": 25,
+            "1": 23,
+            "2": 0,
+            "3": 0
+        }
+    },
+    "model_pipeline": "llm=HuggingFacePipeline(pipeline=<transformers.pipelines.text_generation.TextGenerationPipeline object at 0x178148410>, model_id='microsoft/Phi-3-mini-4k-instruct', model_kwargs={}, pipeline_kwargs={'max_new_tokens': 20, 'top_k': 50}) tokenizer=LlamaTokenizerFast(name_or_path='microsoft/Phi-3-mini-4k-instruct', vocab_size=32000, model_max_length=4096, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'bos_token': '<s>', 'eos_token': '<|endoftext|>', 'unk_token': '<unk>', 'pad_token': '<|endoftext|>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={\n\t0: AddedToken(\"<unk>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"<s>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t2: AddedToken(\"</s>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=False),\n\t32000: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t32001: AddedToken(\"<|assistant|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32002: AddedToken(\"<|placeholder1|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32003: AddedToken(\"<|placeholder2|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32004: AddedToken(\"<|placeholder3|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32005: AddedToken(\"<|placeholder4|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32006: AddedToken(\"<|system|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32007: AddedToken(\"<|end|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32008: AddedToken(\"<|placeholder5|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32009: AddedToken(\"<|placeholder6|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32010: AddedToken(\"<|user|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n}\n) model_id='microsoft/Phi-3-mini-4k-instruct'"
+}

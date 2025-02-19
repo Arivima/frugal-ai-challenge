@@ -8,3 +8,6 @@ submission-template/
 iframe_figures/
 
 *.csv
+
+*.pyc
+poetry.lock
