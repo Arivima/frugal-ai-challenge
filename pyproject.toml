@@ -21,6 +21,8 @@ transformers = "^4.49.0"
 matplotlib = "^3.10.0"
 seaborn = "^0.13.2"
 langchain-huggingface = "^0.1.2"
+codecarbon = "^2.8.3"
+tf-keras = "^2.18.0"
 
 
 [build-system]

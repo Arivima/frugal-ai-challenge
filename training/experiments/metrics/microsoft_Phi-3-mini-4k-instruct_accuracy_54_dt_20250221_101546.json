@@ -1,0 +1,97 @@
+{
+    "model_name": "microsoft/Phi-3-mini-4k-instruct",
+    "accuracy": 0.54,
+    "timestamp": "2025-02-21_10:15:46",
+    "model_details": {
+        "model_name": "microsoft/Phi-3-mini-4k-instruct",
+        "model_type": "<class 'transformers.models.phi3.modeling_phi3.Phi3ForCausalLM'>",
+        "total_params_Billion": 3.82,
+        "precision": "torch.float32",
+        "estimated_memory_gb": 15.28
+    },
+    "pipeline_kwargs": {
+        "max_new_tokens": 2,
+        "top_k": 50,
+        "do_sample": false
+    },
+    "sample_size": 50,
+    "quote_len_truncated": 350,
+    "prompt_template": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nRespond STRICTLY with only the corresponding number. \nDO NOT INCLUDE ANY OTHER TEXT.\nIf you do not know the answer, make your best guess.\n</instruction>\n\n<categories>\n0 - Not relevant: No climate-related claims or doesn't fit other categories\n1 - Denial: Claims climate change is not happening\n2 - Attribution denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solution opposition: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Actor criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"{quote}\"\n</statement>\n\nCategory number:",
+    "efficiency": {
+        "Timings (seconds)": {
+            "load_frugalai_dataset": 10.004154416998063,
+            "load_model": 61.40153116700094,
+            "inference": 75.52134425000258,
+            "Total": 146.9270298340016
+        },
+        "Emissions (CO2eq)": {
+            "load_frugalai_dataset": 5.420907385454842e-07,
+            "load_model": 6.829103946208526e-06,
+            "inference": 1.4014046882389675e-05,
+            "Total": 2.1385241567143685e-05
+        },
+        "Energy (kWh)": {
+            "load_frugalai_dataset": 9.673454889371404e-06,
+            "load_model": 0.00012186341558929541,
+            "inference": 0.0002500766766428679,
+            "Total": 0.0003816135471215347
+        }
+    },
+    "performance": {
+        "Outcome": {
+            "0": "Correct",
+            "1": "Incorrect",
+            "2": "Unknown",
+            "3": "Error"
+        },
+        "Count": {
+            "0": 26,
+            "1": 22,
+            "2": 0,
+            "3": 0
+        }
+    },
+    "category_performance": {
+        "Category": {
+            "0": "0_not_relevant",
+            "1": "1_not_happening",
+            "2": "2_not_human",
+            "3": "3_not_bad",
+            "4": "4_solutions_harmful_unnecessary",
+            "5": "5_science_unreliable",
+            "6": "6_proponents_biased",
+            "7": "7_fossil_fuels_needed"
+        },
+        "Precision": {
+            "0": 0.5,
+            "1": 0.5714285714285714,
+            "2": 0.5,
+            "3": 0.6666666666666666,
+            "4": 0.5,
+            "5": 0.38461538461538464,
+            "6": 1.0,
+            "7": 0.4444444444444444
+        },
+        "Recall": {
+            "0": 0.16666666666666666,
+            "1": 0.6666666666666666,
+            "2": 0.16666666666666666,
+            "3": 0.6666666666666666,
+            "4": 0.3333333333333333,
+            "5": 0.8333333333333334,
+            "6": 0.8333333333333334,
+            "7": 0.6666666666666666
+        },
+        "F1 Score": {
+            "0": 0.25,
+            "1": 0.6153846153846154,
+            "2": 0.25,
+            "3": 0.6666666666666666,
+            "4": 0.4,
+            "5": 0.5263157894736842,
+            "6": 0.9090909090909091,
+            "7": 0.5333333333333333
+        }
+    },
+    "model_pipeline": "llm=HuggingFacePipeline(pipeline=<transformers.pipelines.text_generation.TextGenerationPipeline object at 0x308c4cc50>, model_id='microsoft/Phi-3-mini-4k-instruct', model_kwargs={}, pipeline_kwargs={'max_new_tokens': 2, 'top_k': 50, 'do_sample': False}) tokenizer=LlamaTokenizerFast(name_or_path='microsoft/Phi-3-mini-4k-instruct', vocab_size=32000, model_max_length=4096, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'bos_token': '<s>', 'eos_token': '<|endoftext|>', 'unk_token': '<unk>', 'pad_token': '<|endoftext|>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={\n\t0: AddedToken(\"<unk>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"<s>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t2: AddedToken(\"</s>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=False),\n\t32000: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t32001: AddedToken(\"<|assistant|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32002: AddedToken(\"<|placeholder1|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32003: AddedToken(\"<|placeholder2|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32004: AddedToken(\"<|placeholder3|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32005: AddedToken(\"<|placeholder4|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32006: AddedToken(\"<|system|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32007: AddedToken(\"<|end|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32008: AddedToken(\"<|placeholder5|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32009: AddedToken(\"<|placeholder6|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32010: AddedToken(\"<|user|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n}\n) model_id='microsoft/Phi-3-mini-4k-instruct'"
+}

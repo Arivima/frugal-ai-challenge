@@ -1,0 +1,97 @@
+{
+    "model_name": "Qwen/Qwen2.5-0.5B",
+    "accuracy": 0.0,
+    "timestamp": "2025-02-24_16:28:21",
+    "model_details": {
+        "model_name": "Qwen/Qwen2.5-0.5B",
+        "model_type": "<class 'transformers.models.qwen2.modeling_qwen2.Qwen2ForCausalLM'>",
+        "total_params_Billion": 0.49,
+        "precision": "torch.float32",
+        "estimated_memory_gb": 1.98
+    },
+    "pipeline_kwargs": {
+        "max_new_tokens": 2,
+        "top_k": 50,
+        "do_sample": false
+    },
+    "sample_size": 50,
+    "quote_len_truncated": 350,
+    "prompt_template": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nYour final answer must consist of exactly one token\u2014the corresponding digit. \nDo not output any additional text, spaces, or punctuation.\nIf you do not know the answer, make your best guess.\n</instruction>\n\n<categories>\n0 - Not relevant: No climate-related claims or doesn't fit other categories\n1 - Denial: Claims climate change is not happening\n2 - Attribution denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solution opposition: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Actor criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"{quote}\"\n</statement>\n\nCategory number:",
+    "efficiency": {
+        "Timings (seconds)": {
+            "load_frugalai_dataset": 9.61082429200178,
+            "load_model": 12.418239417020231,
+            "inference": 17.479903333005495,
+            "Total": 39.50896704202751
+        },
+        "Emissions (CO2eq)": {
+            "load_frugalai_dataset": 5.059897394705584e-07,
+            "load_model": 9.566330875359384e-07,
+            "inference": 1.7681261156866083e-06,
+            "Total": 3.230748942693105e-06
+        },
+        "Energy (kWh)": {
+            "load_frugalai_dataset": 9.029242839282612e-06,
+            "load_model": 1.707084508174554e-05,
+            "inference": 3.155170712694031e-05,
+            "Total": 5.765179504796847e-05
+        }
+    },
+    "performance": {
+        "Outcome": {
+            "0": "Correct",
+            "1": "Incorrect",
+            "2": "Unknown",
+            "3": "Error"
+        },
+        "Count": {
+            "0": 0,
+            "1": 48,
+            "2": 0,
+            "3": 0
+        }
+    },
+    "category_performance": {
+        "Category": {
+            "0": "0_not_relevant",
+            "1": "1_not_happening",
+            "2": "2_not_human",
+            "3": "3_not_bad",
+            "4": "4_solutions_harmful_unnecessary",
+            "5": "5_science_unreliable",
+            "6": "6_proponents_biased",
+            "7": "7_fossil_fuels_needed"
+        },
+        "Precision": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0
+        },
+        "Recall": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0
+        },
+        "F1 Score": {
+            "0": 0.0,
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0
+        }
+    },
+    "model_pipeline": "llm=HuggingFacePipeline(pipeline=<transformers.pipelines.text_generation.TextGenerationPipeline object at 0x13f4bf140>, model_id='Qwen/Qwen2.5-0.5B', model_kwargs={}, pipeline_kwargs={'max_new_tokens': 2, 'top_k': 50, 'do_sample': False}) tokenizer=Qwen2TokenizerFast(name_or_path='Qwen/Qwen2.5-0.5B', vocab_size=151643, model_max_length=131072, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|endoftext|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={\n\t151643: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151644: AddedToken(\"<|im_start|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151645: AddedToken(\"<|im_end|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151646: AddedToken(\"<|object_ref_start|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151647: AddedToken(\"<|object_ref_end|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151648: AddedToken(\"<|box_start|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151649: AddedToken(\"<|box_end|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151650: AddedToken(\"<|quad_start|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151651: AddedToken(\"<|quad_end|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151652: AddedToken(\"<|vision_start|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151653: AddedToken(\"<|vision_end|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151654: AddedToken(\"<|vision_pad|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151655: AddedToken(\"<|image_pad|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151656: AddedToken(\"<|video_pad|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t151657: AddedToken(\"<tool_call>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151658: AddedToken(\"</tool_call>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151659: AddedToken(\"<|fim_prefix|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151660: AddedToken(\"<|fim_middle|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151661: AddedToken(\"<|fim_suffix|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151662: AddedToken(\"<|fim_pad|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151663: AddedToken(\"<|repo_name|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n\t151664: AddedToken(\"<|file_sep|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),\n}\n) model_id='Qwen/Qwen2.5-0.5B'"
+}

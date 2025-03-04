@@ -1,0 +1,97 @@
+{
+    "model_name": "microsoft/Phi-3-mini-4k-instruct",
+    "accuracy": 0.53,
+    "timestamp": "2025-02-21_15:14:35",
+    "model_details": {
+        "model_name": "microsoft/Phi-3-mini-4k-instruct",
+        "model_type": "<class 'transformers.models.phi3.modeling_phi3.Phi3ForCausalLM'>",
+        "total_params_Billion": 3.82,
+        "precision": "torch.float32",
+        "estimated_memory_gb": 15.28
+    },
+    "pipeline_kwargs": {
+        "max_new_tokens": 2,
+        "top_k": 50,
+        "do_sample": false
+    },
+    "sample_size": 500,
+    "quote_len_truncated": 350,
+    "prompt_template": "\n<instruction>\nClassify the following statement into one of these 8 categories:\nRespond STRICTLY with only the corresponding number. \nDO NOT INCLUDE ANY OTHER TEXT.\nIf you do not know the answer, make your best guess.\n</instruction>\n\n<categories>\n0 - Not relevant: No climate-related claims or doesn't fit other categories\n1 - Denial: Claims climate change is not happening\n2 - Attribution denial: Claims human activity is not causing climate change\n3 - Impact minimization: Claims climate change impacts are minimal or beneficial\n4 - Solution opposition: Claims solutions to climate change are harmful\n5 - Science skepticism: Challenges climate science validity or methods\n6 - Actor criticism: Attacks credibility of climate scientists or activists\n7 - Fossil fuel promotion: Asserts importance of fossil fuels\n</categories>\n\n<statement>\nStatement: \"{quote}\"\n</statement>\n\nCategory number:",
+    "efficiency": {
+        "Timings (seconds)": {
+            "load_frugalai_dataset": 11.128517457997077,
+            "load_model": 54.61721083299926,
+            "inference": 933.1243840000025,
+            "Total": 998.8701122909988
+        },
+        "Emissions (CO2eq)": {
+            "load_frugalai_dataset": 7.022777040170755e-07,
+            "load_model": 6.9207837421474045e-06,
+            "inference": 0.00012210291077498212,
+            "Total": 0.0001297259722211466
+        },
+        "Energy (kWh)": {
+            "load_frugalai_dataset": 1.2531945680991372e-05,
+            "load_model": 0.00012349941544544698,
+            "inference": 0.002178891678562824,
+            "Total": 0.0023149230396892623
+        }
+    },
+    "performance": {
+        "Outcome": {
+            "0": "Correct",
+            "1": "Incorrect",
+            "2": "Unknown",
+            "3": "Error"
+        },
+        "Count": {
+            "0": 261,
+            "1": 235,
+            "2": 0,
+            "3": 0
+        }
+    },
+    "category_performance": {
+        "Category": {
+            "0": "0_not_relevant",
+            "1": "1_not_happening",
+            "2": "2_not_human",
+            "3": "3_not_bad",
+            "4": "4_solutions_harmful_unnecessary",
+            "5": "5_science_unreliable",
+            "6": "6_proponents_biased",
+            "7": "7_fossil_fuels_needed"
+        },
+        "Precision": {
+            "0": 0.5,
+            "1": 0.5490196078431373,
+            "2": 0.6153846153846154,
+            "3": 0.4782608695652174,
+            "4": 0.5555555555555556,
+            "5": 0.3858267716535433,
+            "6": 0.5957446808510638,
+            "7": 0.7719298245614035
+        },
+        "Recall": {
+            "0": 0.5645161290322581,
+            "1": 0.45161290322580644,
+            "2": 0.3870967741935484,
+            "3": 0.532258064516129,
+            "4": 0.3225806451612903,
+            "5": 0.7903225806451613,
+            "6": 0.45161290322580644,
+            "7": 0.7096774193548387
+        },
+        "F1 Score": {
+            "0": 0.5303030303030303,
+            "1": 0.49557522123893805,
+            "2": 0.4752475247524752,
+            "3": 0.5038167938931297,
+            "4": 0.40816326530612246,
+            "5": 0.5185185185185185,
+            "6": 0.5137614678899083,
+            "7": 0.7394957983193278
+        }
+    },
+    "model_pipeline": "llm=HuggingFacePipeline(pipeline=<transformers.pipelines.text_generation.TextGenerationPipeline object at 0x310a765a0>, model_id='microsoft/Phi-3-mini-4k-instruct', model_kwargs={}, pipeline_kwargs={'max_new_tokens': 2, 'top_k': 50, 'do_sample': False}) tokenizer=LlamaTokenizerFast(name_or_path='microsoft/Phi-3-mini-4k-instruct', vocab_size=32000, model_max_length=4096, is_fast=True, padding_side='left', truncation_side='right', special_tokens={'bos_token': '<s>', 'eos_token': '<|endoftext|>', 'unk_token': '<unk>', 'pad_token': '<|endoftext|>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={\n\t0: AddedToken(\"<unk>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"<s>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t2: AddedToken(\"</s>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=False),\n\t32000: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t32001: AddedToken(\"<|assistant|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32002: AddedToken(\"<|placeholder1|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32003: AddedToken(\"<|placeholder2|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32004: AddedToken(\"<|placeholder3|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32005: AddedToken(\"<|placeholder4|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32006: AddedToken(\"<|system|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32007: AddedToken(\"<|end|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32008: AddedToken(\"<|placeholder5|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32009: AddedToken(\"<|placeholder6|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n\t32010: AddedToken(\"<|user|>\", rstrip=True, lstrip=False, single_word=False, normalized=False, special=True),\n}\n) model_id='microsoft/Phi-3-mini-4k-instruct'"
+}

@@ -14,9 +14,14 @@ def print_distribution(dataset: DatasetDict | Dataset | pd.Series | list, column
             return
         print(f"{'Category':<40}{'Count':<10}{'Percentage'}")
         print("-" * 60)
+        counts = 0
         for category, count in sorted(category_counter.items()):
             percentage = round((count / total) * 100, 2)
             print(f"{category:<40}{count:<10}{percentage}%")
+            counts += count
+        print("-" * 60)
+        print(f"{'Total':<40}{counts:<10}")
+            
 
     if isinstance(dataset, DatasetDict):
         for split in dataset.keys():
