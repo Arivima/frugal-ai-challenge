@@ -23,6 +23,7 @@ seaborn = "^0.13.2"
 langchain-huggingface = "^0.1.2"
 codecarbon = "^2.8.3"
 tf-keras = "^2.18.0"
+wandb = "^0.19.8"
 
 
 [build-system]
